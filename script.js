@@ -7,6 +7,7 @@ let draw_counter =0;
 let c_loss = u_counter;
 let u_loss = c_counter;
 
+    alert("PICK ROCK OR PAPER OR SCISSORS TO PLAY... GOOD LUCK")
 
 
 function playground(){
