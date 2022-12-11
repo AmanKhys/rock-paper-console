@@ -6,6 +6,7 @@ let u_counter = 0;
 let draw_counter =0;
 let c_loss = u_counter;
 let u_loss = c_counter;
+var USER_CHOICE = "none";
 
     alert("PICK ROCK OR PAPER OR SCISSORS TO PLAY... GOOD LUCK")
 
@@ -14,19 +15,34 @@ function playground(){
     const CHOICE = ["rock", "paper", "scissors"];
     const RANDOM_NUMBER = Math.floor(Math.random() * CHOICE.length);
     const  COMPUTER_CHOICE =   CHOICE[RANDOM_NUMBER];
-    let USER_CHOICE_CHECKER; 
+
+
+    const choice = Array.from(document.querySelectorAll('.card'));
+    console.log(choice);
+
+    function getChoice(e){
+    USER_CHOICE =  this.textContent;
+    console.log(USER_CHOICE);
+    }
+    choice.forEach((card) =>{
+    // console.log(card);
+        card.addEventListener('click', getChoice);
+    });
+    console.log(USER_CHOICE);
+
+
+//    let USER_CHOICE_CHECKER; 
 //user choice verify its appropriate 
-// code
+// code INFINITE LOOPING
     while(true){
-         USER_CHOICE_CHECKER = prompt("what would you like to choose?").toLowerCase();
-        if(USER_CHOICE_CHECKER == CHOICE[0] ||
-            USER_CHOICE_CHECKER == CHOICE[1] ||
-            USER_CHOICE_CHECKER == CHOICE[2]){
+        if(USER_CHOICE == CHOICE[0] ||
+            USER_CHOICE == CHOICE[1] ||
+            USER_CHOICE == CHOICE[2]){
                 break;
             }
-        else alert("enter a valid answer")
-    }
-    const   USER_CHOICE = USER_CHOICE_CHECKER;
+        else continue;
+   }
+//    const   USER_CHOICE = USER_CHOICE_CHECKER;
     console.log(`COMPUTER CHOSE: ${COMPUTER_CHOICE} \
     USER CHOSE: ${USER_CHOICE} `)
 
