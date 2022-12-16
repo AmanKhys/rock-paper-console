@@ -1,0 +1,52 @@
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+.container{
+  padding:10% 0 0 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+.card{
+  width:200px;height:100px;
+  border:solid rgb(59, 63, 77) 5px;
+  border-radius: 10px;
+  background-color: rgb(47, 103, 148);
+  flex:0 1 auto;
+  color:whitesmoke;
+  font-size: xx-large;
+  font-family:'Arial Narrow', Arial, sans-serif;
+  
+}
+
+body{
+  background: linear-gradient(red,lightblue);
+
+}
+
+/* CSS FONTS */
+@font-face {
+  font-family: rps;
+  src: url(font/LuckiestGuy.ttf);
+}
+@font-face {
+  font-family: results;
+  src: url(font/TTDirectorsDEMOBL-Regular.ttf);
+}
+@font-face {
+  font-family: messege;
+  src: url(font/CarterOne.ttf);
+}
+
+.header{
+  font-family: rps;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  padding-top:40px;
+  color:rgb(255, 160, 176);
+
+}
